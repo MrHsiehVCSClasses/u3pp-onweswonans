@@ -8,7 +8,21 @@ public class PalindromeTester {
      * @return true if the string is a palindrome
      */
     public static boolean isPalindrome(String s) {
-
-        return true;
+        String str = s;
+        String strr = "";
+        
+        str = str.toLowerCase();
+        for(int i = str.length()-1; i >= 0; i--){
+            strr = strr +str.charAt(i);
+        }
+        
+        
+        
+        if ( str.equals(strr) ){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

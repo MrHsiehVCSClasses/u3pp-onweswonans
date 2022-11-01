@@ -84,7 +84,10 @@ public class Card {
 	 * @return true if both the suit and value of this and c are the same
 	 */
 	public boolean equals (Card c) {
-		return this.toString().equals(c.toString());
+        if (c == null){
+            return false;
+        }
+        return this.toString().equals(c.toString());
 	}
 	
 	/**
@@ -92,7 +95,7 @@ public class Card {
 	 * @return "<value> of <suit>"
 	 */
 	public String toString() {
-		return this.value + " of " + this.suit;
+        return this.value + " of " + this.suit;
 	}
 	
 	/**
@@ -108,7 +111,7 @@ public class Card {
         }
         // this card is greater
         else if (valueGreaterThan(c)) {
-            return 1;
+            return 1; 
         }
         // this card is smaller
         return -1;
